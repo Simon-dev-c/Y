@@ -5,10 +5,15 @@
     <head>
         <meta charset="UTF-8">
         <link href="accueil.css" rel="stylesheet" type="text/css">
+        <script src="js-file.js"></script>
         <title>Y</title>
     </head>
     <body>
         <div class="banniere">
+            Bonjour, nous sommes le :
+            <script>
+                aujourdhui();
+            </script>
             <h1>
                 Y
             </h1>
