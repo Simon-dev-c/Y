@@ -1,5 +1,7 @@
 Projet enorme reseau social : 
-pour les icons : https://www.flaticon.com/
+pour les icons : 
+https://www.flaticon.com/
+https://ionic.io/ionicons
 		 
 
 Etape 1 :
