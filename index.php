@@ -38,6 +38,30 @@
         <br><br><br><br><br>
         <br><br><br><br><br>
         <br><br><br><br><br>
+        <section class="commentaires">
+            <div class="ligne">
+                <div class="InfosUtilisateurs">
+                    <div class="avatar">
+                        <div class="auteur">
+                            <p>
+                               Simon
+                            </p>
+                        </div>
+                        <a>
+                            <img class="img_avatar" src="image.png" alt="avatar" width="150" height="100"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="contenu">
+                    <br>
+                    <div class="message">
+                        <p>Voici un message. fidhgfhdghfdkugfdkjdhgkdhgkdfg
+                            f<br>gdgfgdhkjghkfghdkghf.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <br><br><br><br><br>
         <br><br><br><br><br>
         <br><br><br><br><br>
