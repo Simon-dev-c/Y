@@ -1,4 +1,6 @@
-Projet enorme reseau social 
+Projet enorme reseau social : 
+pour les icons : https://www.flaticon.com/
+		 
 
 Etape 1 :
 	affichage (HTML, CSS).
