@@ -1,5 +1,6 @@
 body{
   background-color:#FEFFF4;
+  /*background : linear-gradient(#FEFFF4,#F8ED9D);*/
 }
 
 .header {
@@ -23,6 +24,7 @@ body{
 .logo img {
   border-radius:50%;
   padding:5px;
+  margin-left:-50px;
 }
 
 .lien {
@@ -35,11 +37,6 @@ body{
   text-decoration:none;
 }
 
-.image {
-  position: static;
-  padding: 5px 50px;
-}
-
 .footer {
   position:fixed;
   bottom:0;
@@ -48,4 +45,9 @@ body{
   text-align:center;
   margin-left: -10px;
 }
-  
+
+.footer .image {
+  position: relative;
+  padding: 5px 50px;
+  right:20px;
+}
