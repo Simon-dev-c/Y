@@ -11,7 +11,7 @@
     <body>
         <div class="header">
             <nav class="profil">
-                <a href="#"><img src="images/person-circle-outline.svg" alt="profil" width="70" height="70"></a>
+                <a href="profile.php"><img src="images/person-circle-outline.svg" alt="profil" width="70" height="70"></a>
             </nav>
             <div class="logo">
                 <img src="images/logo.jpg" alt="logo" width="70" height="70">
