@@ -18,7 +18,8 @@
             </div>
         </div>
 
-        <br><br><br><br><br><br><br><br>
+        <br><br><br><br><br>
+        
         <div class="contenu">
             <div class="gauche">
             </div>
@@ -26,21 +27,32 @@
                  <nav class="retour">
                      <a href="#"><img src="images/arrow-left.svg" alt="retour" width="40" height="40"></a>
                  </nav>
+
+                 <div class="fond_profile">
+                     <img src="images/fond_profile.jpeg" alt="fond_profile">
+                 </div>
+                 <div class="profile_img">
+                     <img src="images/person-circle-outline.svg" alt="profile" width="70" height="70">
+                 </div>
+
+                 <div class="edit_button" align="right">
+                     <button type="submit">Edit profile</button>
+                 </div>
+
+                 <p class="name">name</p>
+                 <p> <b>0</b> Following  <b>0</b> Followers</p>
+
+
+                 <nav class="last_info">
+                     <p>Posts</p>
+                     <p>Replies</p>
+                     <p>Highlights</p>
+                     <p>Media</p>
+                     <p>Likes</p>
+                 </nav>
+                 <div class="content_box">
+                 </div>
                  
-                <div class="fond_profile">
-                    <img src="images/fond_profile.jpeg" alt="fond_profile" height="350">
-                </div>
-                <div class="profile_img">
-                    <img src="images/person-circle-outline.svg" alt="profile" width="70" height="70">
-                </div>
-
-                <div class="edit_button" align="right">
-                    <button type="submit">Edit profile</button>
-                </div>
-
-                <p class="name">name</p>
-                <p> ? Following  ? Followers</p>
-                
             </div>
             <div class="droite">
             </div>
