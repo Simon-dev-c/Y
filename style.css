@@ -79,8 +79,14 @@ body{
   margin-top:-50px;
 }
 
+.profile .fond_profile {
+  max-height:300px;
+  overflow:hidden;
+}
+
 .profile .fond_profile img {
   width:100%;
+  margin-top:-5%;
 }
 
 .retour img {
@@ -94,4 +100,14 @@ body{
 .profile .name {
   padding:10px;
   margin-top:-40px;
+}
+
+.profile .last_info {
+  display:inline-flex;
+  text-align:right;
+}
+
+.profile .last_info p {
+  font-weight:bold;
+  padding:0 5%;
 }
