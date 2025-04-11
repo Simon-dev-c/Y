@@ -43,13 +43,14 @@
                  <p> <b>0</b> Following  <b>0</b> Followers</p>
 
 
-                 <nav class="last_info">
-                     <p>Posts</p>
-                     <p>Replies</p>
-                     <p>Highlights</p>
-                     <p>Media</p>
-                     <p>Likes</p>
-                 </nav>
+                 <div class="last_info">
+                     <div>Posts</div>
+                     <div>Replies</div>
+                     <div>Highlights</div>
+                     <div>Media</div>
+                     <div>Likes</div>
+                 </div>
+                 
                  <div class="content_box">
                  </div>
                  
