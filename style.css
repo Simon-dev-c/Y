@@ -105,9 +105,18 @@ body{
 .profile .last_info {
   display:inline-flex;
   text-align:right;
+  font-weight:bold;
+  border:solid;
+  border-color:gray;
+  box-sizing: content-box;
+  width:100%;
+  overflow:hidden;
 }
 
-.profile .last_info p {
-  font-weight:bold;
-  padding:0 5%;
+.last_info div{
+  flex:auto;
+}
+
+.last_info div:last-child {
+  padding-right:10%;
 }
