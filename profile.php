@@ -1,4 +1,8 @@
 <?php
+session_start();
+$pseudo=$_SESSION["pseudo"];
+$mdp=$_SESSION["mdp"];
+$statut=$_SESSION["statut"];
 
 ?>
 <!DOCTYPE html>
