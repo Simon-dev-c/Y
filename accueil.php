@@ -1,8 +1,8 @@
 <?php
 session_start();
-$pseudo=$_SESSION["pseudo"];
-$mdp=$_SESSION["mdp"];
-$statut=$_SESSION["statut"];
+$pseudo = $_SESSION["pseudo"] ?? null;
+$mdp = $_SESSION["mdp"] ?? null;
+$statut = $_SESSION['statut'] ?? null;
 
 function NoConnect(){
     echo "Tu n'es pas connecté<br>";
