@@ -1,4 +1,8 @@
-<php
+<?php
+session_start();
+$pseudo = $_SESSION["pseudo"] ?? null;
+$mdp = $_SESSION["mdp"] ?? null;
+$statut = $_SESSION['statut'] ?? null;
 
 ?>
 <!DOCTYPE html>
