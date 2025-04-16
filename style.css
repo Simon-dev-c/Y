@@ -11,10 +11,11 @@ body{
   height:75px;
   margin-left: -10px;
 }
+
 .header .profile_img {
   position: absolute;
-  top: -3px;
-  left: 5%;
+  top: 0;
+  left: 0;
 }
 
 .header .log-out {
