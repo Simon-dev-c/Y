@@ -39,15 +39,15 @@ function NoConnect(){
             
         </div>
 
-        <br><br><br><br> <!-- Important pour ne pas mettre le contenu derrière le header -->
-
+        <br><br><br><br><br> <!-- Important pour ne pas mettre le contenu derrière le header -->
         <?php
         if (!isset($pseudo)){
-            return NoConnect();
+            NoConnect();
         }
         ?>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>fgdgfdgfdgd<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         
+
         <div class="footer">
             <nav class="navigateur">
                 <ol>
@@ -60,4 +60,3 @@ function NoConnect(){
         </div>
     </body>
 </html>
-
