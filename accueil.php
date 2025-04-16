@@ -1,4 +1,15 @@
 <?php
+session_start();
+$pseudo=$_SESSION["pseudo"];
+$mdp=$_SESSION["mdp"];
+$statut=$_SESSION["statut"];
+
+function NoConnect(){
+    echo "Tu n'es pas connecté<br>";
+    echo "<a href='register.php'>Connexion</a><br>";
+    echo "<a href='login.php'>Inscription</a><br>";
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -16,11 +27,25 @@
             <div class="logo">
                 <img src="images/logo.jpg" alt="logo" width="70" height="70">
             </div>
-            <div class="log-out">
-                <a href="login.php"><img src="images/log-out.svg" alt="log-out" width="70" height="70"></a>
-            </div>
+            <?php
+            if (isset($pseudo)){
+            ?>
+                <div class="log-out">
+                    <a href="login.php"><img src="images/log-out.svg" alt="log-out" width="70" height="70"></a>
+                </div>
+            <?php
+            }
+            ?>
+            
         </div>
 
+        <br><br><br><br> <!-- Important pour ne pas mettre le contenu derrière le header -->
+
+        <?php
+        if (!isset($pseudo)){
+            return NoConnect();
+        }
+        ?>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>fgdgfdgfdgd<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         
         <div class="footer">
@@ -35,3 +60,4 @@
         </div>
     </body>
 </html>
+
