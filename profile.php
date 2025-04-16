@@ -4,6 +4,12 @@ $pseudo=$_SESSION["pseudo"];
 $mdp=$_SESSION["mdp"];
 $statut=$_SESSION["statut"];
 
+function NoConnect(){
+    echo "Tu n'es pas connecté<br>";
+    echo "<a href='register.php'>Connexion</a><br>";
+    echo "<a href='login.php'>Inscription</a><br>";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -75,6 +81,8 @@ $statut=$_SESSION["statut"];
                 </div>
             </div>
         <?php
+        }else{
+            NoConnect();
         }
         ?>
         
