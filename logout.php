@@ -1,7 +1,6 @@
 <?php
 session_start();
 $nom = $_SESSION["nom"] ?? null;
-$mdp = $_SESSION["mdp"] ?? null;
 $statut = $_SESSION['statut'] ?? null;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
