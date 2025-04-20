@@ -1,6 +1,6 @@
 <?php
 session_start();
-$pseudo = $_SESSION["pseudo"] ?? null;
+$nom = $_SESSION["nom"] ?? null;
 $mdp = $_SESSION["mdp"] ?? null;
 $statut = $_SESSION['statut'] ?? null;
 
@@ -12,13 +12,9 @@ function NoConnect(){
 
 
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title>Project Y</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<?php
+include("includes/head.php");
+?>
     <body>
         <div class="header">
             <nav class="profil">
@@ -28,7 +24,7 @@ function NoConnect(){
                 <img src="images/logo.jpg" alt="logo" width="70" height="70">
             </div>
             <?php
-            if (isset($pseudo)){
+            if (isset($nom)){
             ?>
                 <div class="log-out">
                     <a href="login.php"><img src="images/log-out.svg" alt="log-out" width="70" height="70"></a>
@@ -41,20 +37,11 @@ function NoConnect(){
 
         <br><br><br><br><br> <!-- Important pour ne pas mettre le contenu derrière le header -->
         <?php
-        if (!isset($pseudo)){
+        if (!isset($nom)){
             NoConnect();
         }
         ?>
 
-        <div class="footer">
-            <nav class="navigateur">
-                <ol>
-                    <li class="lien"><a href="accueil.php"><img src="images/home.svg" alt="profil" class="image" width="42" height="42"></a></li>
-                    <li class="lien"><a href="setting.php"><img src="images/settings.svg" alt="profil" class="image" width="42" height="42"></a></li>
-                    <li class="lien"><a href="message.php"><img src="images/paper-plane.svg" alt="profil" class="image" width="42" height="42"></a></li>
-                    <li class="lien"><a href="partage.php"><img src="images/share.svg" alt="profil" class="image" width="42" height="42"></a></li>
-                </ol>
-            </nav>
-        </div>
-    </body>
-</html>
+<?php
+        include("includes/footer.php");
+?>
