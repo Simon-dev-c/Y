@@ -1,7 +1,6 @@
 <?php
 session_start();
 $nom = $_SESSION["nom"] ?? null;
-$mdp = $_SESSION["mdp"] ?? null;
 $statut = $_SESSION['statut'] ?? null;
 
 function NoConnect()
@@ -28,7 +27,7 @@ include("includes/head.php");
         if (isset($nom)) {
         ?>
             <div class="log-out">
-                <a href="login.php"><img src="images/log-out.svg" alt="log-out" width="70" height="70"></a>
+                <a href="logout.php"><img src="images/log-out.svg" alt="log-out" width="70" height="70"></a>
             </div>
         <?php
         }
