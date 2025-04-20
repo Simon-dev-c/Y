@@ -21,7 +21,6 @@ if (isset($_POST['nom']) && isset($_POST['mdp']) && isset($_POST['email'])) {
             echo '<p>Ajout effectué</p>';
             
             $_SESSION['nom'] = $nom;
-            $_SESSION['mdp'] = $mdp;
             $_SESSION['statut'] = $statut;
         } else {
             echo '<p>Erreur</p>';
@@ -33,7 +32,7 @@ if (isset($_POST['nom']) && isset($_POST['mdp']) && isset($_POST['email'])) {
     $stmt->closeCursor();
     $pdo = null;
     ?>
-    <a href='accueil.php'>Accueil</a><br>
+    <a href='../accueil.php'>Accueil</a><br>
     <?php
 } else {
     echo "<p>Mauvais paramètres</p>";
