@@ -1,7 +1,6 @@
 <?php
 session_start();
 $nom = $_SESSION["nom"] ?? null;
-$mdp = $_SESSION["mdp"] ?? null;
 $statut = $_SESSION['statut'] ?? null;
 
 ?>
@@ -30,10 +29,10 @@ include("includes/head2.php");
         } else {
         ?>
             <h2>Vous êtes déjà connecté !</h2>
-            <a href='accueil.php'>Accueil</a><br>
         <?php
         }
         ?>
+        <a href='accueil.php'>Accueil</a><br>
     </form>
     <script src="js.js"></script>
 </body>
