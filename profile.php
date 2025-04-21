@@ -22,10 +22,6 @@ try {
     $stmt->execute();
     $requete = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    echo "<pre>";
-    var_dump($requete);
-    echo "</pre>";
-
     if ($requete['bio'] !== null) {
         $bio = $requete['bio'];
     }
