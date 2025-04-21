@@ -1,5 +1,6 @@
 <?php
 session_start();
+$id = $_SESSION["id"] ?? null;
 $nom = $_SESSION["nom"] ?? null;
 $statut = $_SESSION['statut'] ?? null;
 
