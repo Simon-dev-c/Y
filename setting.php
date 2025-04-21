@@ -13,6 +13,8 @@ function NoConnect()
 
 ?>
 <?php
+include("sql/recup_bio.php");
+
 include("includes/head.php");
 ?>
 
@@ -40,6 +42,26 @@ include("includes/head.php");
     <?php
     if (!isset($nom)) {
         NoConnect();
+    } else {
+    ?>
+
+        <div class="contenu">
+            <div class="gauche">
+            </div>
+            <div class="settings">
+                <form action="sql/modif_bio.php" method="POST">
+                    <label>Bio :<textarea name="bio" rows="5"><?php echo htmlspecialchars($bio); ?></textarea></label>
+                    <br>
+                    <label><input name="button" type="submit" value="Modifier"></label><br>
+                </form>
+
+                <!-- Si on veut pouvoir modifier d'autres choses : nom, email, mdp, photo -->
+
+            </div>
+            <div class="droite">
+            </div>
+        </div>
+    <?php
     }
     ?>
 
