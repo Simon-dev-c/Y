@@ -22,7 +22,22 @@ include("includes/head.php");
             NoConnect();
         }else{
         ?>
+        <div class="contenu">
+            <div class="gauche">
+            </div>
+            <div class="post">
+                <form action="ajouter_post.php" method="POST">
+                    <label>Message :<textarea name="post" rows="5"></textarea></label>
+                    <br>
+                    <label><input name="button" type="submit" value="Envoyer"></label><br>
+                </form>
+                <table class="posts_other">
 
+                </table>
+            </div>
+            <div class="droite">
+            </div>
+        </div>
         <?php
         }
         ?>
