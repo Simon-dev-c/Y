@@ -98,6 +98,24 @@ body{
   display:block;
 }
 
+.post {
+  padding : 10px;
+  border:solid;
+  border-color:gray;
+  flex:20;
+  max-width:50%;
+}
+
+.post input {
+  width : 98%;
+  min-height : 20px;
+}
+
+.post textarea {
+  font-size:small;
+  width : 98%;
+  display:block;
+}
 
 .profile .profile_img img {
   position:relative;
