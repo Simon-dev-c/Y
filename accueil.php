@@ -1,5 +1,6 @@
 <?php
 session_start();
+$id = $_SESSION["id"] ?? null;
 $nom = $_SESSION["nom"] ?? null;
 $statut = $_SESSION['statut'] ?? null;
 
@@ -38,6 +39,10 @@ include("includes/head.php");
         <?php
         if (!isset($nom)){
             NoConnect();
+        }else{
+        ?>
+
+        <?php
         }
         ?>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>fgdgfdgfdgd<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
