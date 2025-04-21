@@ -9,7 +9,7 @@ $statut = $_SESSION['statut'] ?? null;
 include("includes/head2.php");
 ?>
 <body>
-    <form action="sql/ajouter.php" method="POST">
+    <form action="sql/ajouter_user.php" method="POST">
         <div class="logo1">
             <img src="images/logo.jpg" alt="logo" width="70" height="70">
         </div>
