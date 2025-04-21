@@ -7,7 +7,7 @@ if (isset($_POST['nom']) && isset($_POST['mdp']) ) {
     include('../includes/connexion_inc.php');
     $pdo = connexion('../Y_database.db');
     try {
-        $stmt = $pdo->prepare('SELECT nom,statut FROM users
+        $stmt = $pdo->prepare('SELECT id,nom,statut FROM users
         WHERE nom == :nom
         AND mot_de_passe == :mot_de_passe');
         $stmt->bindParam(':nom', $nom);
@@ -23,6 +23,7 @@ if (isset($_POST['nom']) && isset($_POST['mdp']) ) {
         if (isset($requete['nom']) && isset($requete['statut'])) {
             echo '<p>Connexion effectué</p>';
             
+            $_SESSION['id'] = $requete['id'];
             $_SESSION['nom'] = $nom;
             $_SESSION['statut'] = $requete["statut"];
         } else {
