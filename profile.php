@@ -2,6 +2,7 @@
 session_start();
 $nom = $_SESSION["nom"] ?? null;
 $statut = $_SESSION['statut'] ?? null;
+$bio = "";
 
 function NoConnect()
 {
@@ -9,6 +10,33 @@ function NoConnect()
     echo "<a href='register.php'>Connexion</a><br>";
     echo "<a href='login.php'>Inscription</a><br>";
 }
+
+
+include('includes/connexion_inc.php');
+$pdo = connexion('Y_database.db');
+try {
+    $stmt = $pdo->prepare('SELECT bio FROM users
+        WHERE nom == :nom');
+    $stmt->bindParam(':nom', $nom);
+
+    $stmt->execute();
+    $requete = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    echo "<pre>";
+    var_dump($requete);
+    echo "</pre>";
+
+    if ($requete['bio'] !== null) {
+        $bio = $requete['bio'];
+    }
+} catch (PDOException $e) {
+    echo '<p>Problème PDO</p>';
+    echo $e->getMessage();
+}
+$stmt->closeCursor();
+$pdo = null;
+
+
 
 ?>
 <?php
@@ -57,9 +85,14 @@ include("includes/head.php");
                 <div class="edit_button" align="right">
                     <button type="submit">Edit profile</button>
                 </div>
-
+                <br>
                 <p class="name">name</p>
                 <p> <b>0</b> Following <b>0</b> Followers</p>
+
+                <h3>Bio :</h3>
+                <p><?php echo htmlspecialchars($bio); ?></p>
+                <br>
+
 
 
                 <div class="last_info">
@@ -82,6 +115,8 @@ include("includes/head.php");
         NoConnect();
     }
     ?>
+
+    <br><br><br><br><br><br><br><br><br><br><br>
 
     <?php
     include("includes/footer.php");
