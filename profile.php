@@ -1,5 +1,6 @@
 <?php
 session_start();
+$id = $_SESSION["id"] ?? null;
 $nom = $_SESSION["nom"] ?? null;
 $statut = $_SESSION['statut'] ?? null;
 $bio = "";
@@ -12,30 +13,12 @@ function NoConnect()
 }
 
 
-include('includes/connexion_inc.php');
-$pdo = connexion('Y_database.db');
-try {
-    $stmt = $pdo->prepare('SELECT bio FROM users
-        WHERE nom == :nom');
-    $stmt->bindParam(':nom', $nom);
-
-    $stmt->execute();
-    $requete = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    if ($requete['bio'] !== null) {
-        $bio = $requete['bio'];
-    }
-} catch (PDOException $e) {
-    echo '<p>Problème PDO</p>';
-    echo $e->getMessage();
-}
-$stmt->closeCursor();
-$pdo = null;
-
 
 
 ?>
 <?php
+include("sql/recup_bio.php");
+
 include("includes/head.php");
 ?>
 
@@ -82,7 +65,7 @@ include("includes/head.php");
                     <button type="submit">Edit profile</button>
                 </div>
                 <br>
-                <p class="name">name</p>
+                <p class="name"><?php echo htmlspecialchars($nom); ?></p>
                 <p> <b>0</b> Following <b>0</b> Followers</p>
 
                 <h3>Bio :</h3>
