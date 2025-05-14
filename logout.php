@@ -27,6 +27,9 @@ include("includes/head2.php");
         if (!isset($nom)) {
         ?>
             <h2>Vous n'êtes pas connecté !</h2>
+            <label><a href="login.php">Se connecter</a></label><br>
+            <label><a href="register.php">Pas de compte ?</a></label><br>
+            <label><a href="accueil.php">Accueil</a></label>
         <?php
         } else {
         ?>
