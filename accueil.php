@@ -24,7 +24,7 @@ include("includes/head.php");
         } else {
         ?>
             <h2>Fil d'actualité</h2>
-            <form action="ajouter_post.php" method="POST" class="post-form">
+            <form action="sql/ajouter_post.php" method="POST" class="post-form">
                 <textarea name="post" rows="4" placeholder="Quoi de neuf ?"></textarea>
                 <button type="submit">Publier</button>
             </form>
