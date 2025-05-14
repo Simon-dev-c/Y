@@ -1,28 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="utf-8">
-    <title>Project Y</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Y Network</title>
 </head>
-
 <body>
-    <div class="header">
-        <nav class="profil">
-            <a href="profile.php"><img src="images/person-circle-outline.svg" alt="profil" width="70" height="70"></a>
-        </nav>
-        <div class="logo">
-            <img src="images/logo.jpg" alt="logo" width="70" height="70">
-        </div>
-        <?php
-        if (isset($nom)) {
-        ?>
-            <div class="log-out">
-                <a href="logout.php"><img src="images/log-out.svg" alt="log-out" width="70" height="70"></a>
-            </div>
-        <?php
-        }
-        ?>
 
-    </div>
+<div class="header">
+    <a href="profile.php"><img src="images/person-circle-outline.svg" alt="profil" width="70" height="70"></a>
+    <img src="images/logo.jpg" alt="logo" width="70" height="70">
+    <a href="logout.php"><img src="images/log-out.svg" alt="log-out" width="70" height="70"></a>
+</div>
