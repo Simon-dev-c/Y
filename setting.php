@@ -1,9 +1,8 @@
 <?php
 session_start();
-$id = $_SESSION["id"] ?? null;
-$nom = $_SESSION["nom"] ?? null;
+$id = $_SESSION['id'] ?? null;
+$nom = $_SESSION['nom'] ?? null;
 $statut = $_SESSION['statut'] ?? null;
-$bio = "";
 
 function NoConnect()
 {
@@ -12,41 +11,48 @@ function NoConnect()
     echo "<a href='login.php'>Inscription</a><br>";
 }
 
+include("sql/recup_setting.php");
 
 ?>
 <?php
-include("sql/recup_bio.php");
-
 include("includes/head.php");
 ?>
 
-    <br><br><br><br><br> <!-- Important pour ne pas mettre le contenu derrière le header -->
-    <?php
-    if (!isset($nom)) {
-        NoConnect();
-    } else {
-    ?>
+<br><br><br><br><br>
 
-        <div class="contenu">
-            <div class="gauche">
-            </div>
-            <div class="settings">
-                <form action="sql/modif_bio.php" method="POST">
-                    <label>Bio :<textarea name="bio" rows="5"><?php echo htmlspecialchars($bio); ?></textarea></label>
-                    <br>
-                    <label><input name="button" type="submit" value="Modifier"></label><br>
-                </form>
+<?php
+if (!isset($nom)) {
+    NoConnect();
+} else {
+?>
+<div class="contenu">
+    <div class="gauche">
+    </div>
+    <div class="settings">
+        <h2>Modifier votre profil</h2>
+        <form action="modif_profile.php" method="POST" class="settings-form" enctype="multipart/form-data">
+            <label>Email :</label>
+            <input type="email" name="email" placeholder="Entrez votre email" value="<?php echo htmlspecialchars($email); ?>" required><br>
 
-                <!-- Si on veut pouvoir modifier d'autres choses : nom, email, mdp, photo -->
+            <label>Mot de passe :</label>
+            <input type="password" name="password" placeholder="Laissez vide pour ne pas changer"><br>
 
-            </div>
-            <div class="droite">
-            </div>
-        </div>
-    <?php
-    }
-    ?>
+            <label>Photo de profil :</label>
+            <input type="file" name="photo"><br>
 
-    <?php
-    include("includes/footer.php");
-    ?>
+            <label>Biographie :</label>
+            <textarea name="bio" placeholder="Votre biographie" rows="5"><?php echo htmlspecialchars($bio); ?></textarea><br>
+
+            <button type="submit">Mettre à jour</button>
+        </form>
+    </div>
+    <div class="droite">
+    </div>
+</div>
+<?php
+}
+?>
+
+<?php
+include("includes/footer.php");
+?>
