@@ -1,9 +1,8 @@
 <?php
 session_start();
-$id = $_SESSION["id"] ?? null;
-$nom = $_SESSION["nom"] ?? null;
+$id = $_SESSION['id'] ?? null;
+$nom = $_SESSION['nom'] ?? null;
 $statut = $_SESSION['statut'] ?? null;
-$bio = "";
 
 function NoConnect()
 {
@@ -12,72 +11,53 @@ function NoConnect()
     echo "<a href='login.php'>Inscription</a><br>";
 }
 
-
-
+include("sql/recup_info_profile.php");
 
 ?>
+<br><br><br><br><br>
 <?php
-include("sql/recup_bio.php");
-
 include("includes/head.php");
 ?>
+<?php
+if (!isset($id)) {
+    NoConnect();
+} else {
+?>
+<div class="contenu">
+    <div class="profile">
+        <img src="images/person-circle-outline.svg" alt="Profile" class="profile_img">
+        <h2><?php echo htmlspecialchars($nom); ?></h2>
+        <p>Email : <?php echo htmlspecialchars($email); ?></p>
+        <p>Biographie : <?php echo htmlspecialchars($bio); ?></p>
 
-    <br><br><br><br><br>
+        <?php if ($user_id != $id) { ?>
+            <form action="follow.php" method="POST">
+                <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+                <?php if ($is_following) { ?>
+                    <button type="submit" name="action" value="unfollow">Se désabonner</button>
+                <?php } else { ?>
+                    <button type="submit" name="action" value="follow">Suivre</button>
+                <?php } ?>
+            </form>
+        <?php } ?>
 
-    <?php
-    if (isset($nom)) {
-    ?>
-        <div class="contenu">
-            <div class="gauche">
-            </div>
-            <div class="profile">
-                <nav class="retour">
-                    <a href="#"><img src="images/arrow-left.svg" alt="retour" width="40" height="40"></a>
-                </nav>
-
-                <div class="fond_profile">
-                    <img src="images/fond_profile.jpeg" alt="fond_profile">
-                </div>
-                <div class="profile_img">
-                    <img src="images/person-circle-outline.svg" alt="profile" width="70" height="70">
-                </div>
-
-                <div class="edit_button" align="right">
-                    <button type="submit">Edit profile</button>
-                </div>
-                <br>
-                <p class="name"><?php echo htmlspecialchars($nom); ?></p>
-                <p> <b>0</b> Following <b>0</b> Followers</p>
-
-                <h3>Bio :</h3>
-                <p><?php echo htmlspecialchars($bio); ?></p>
-                <br>
-
-
-
-                <div class="last_info">
-                    <div>Posts</div>
-                    <div>Replies</div>
-                    <div>Highlights</div>
-                    <div>Media</div>
-                    <div>Likes</div>
-                </div>
-
-                <div class="content_box">
-                </div>
-
-            </div>
-            <div class="droite">
-            </div>
+        <div class="links">
+            <a href="followers.php?user_id=<?php echo $user_id; ?>">Voir les abonnés</a>
+            |
+            <a href="following.php?user_id=<?php echo $user_id; ?>">Voir les abonnements</a>
         </div>
-    <?php
-    } else {
-        NoConnect();
-    }
-    ?>
 
-    <br><br><br><br><br><br><br><br><br><br><br>
-
-    <?php
-    include("includes/footer.php");
-    ?>
+        <h3>Publications :</h3>
+        <div class="posts">
+        <?php
+        include("sql/recup_publications.php");
+        ?>
+        </div>
+    </div>
+</div>
+<?php
+}
+?>
+<?php
+include("includes/footer.php");
+?>
