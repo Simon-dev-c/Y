@@ -2,6 +2,8 @@
 include("includes/connexion_inc.php");
 $pdo = connexion('Y_database.db');
 
+// Utilisé dans profile
+
 // Récupération des informations de l'utilisateur du profil
 $user_id = $_GET['user_id'] ?? $id;
 
