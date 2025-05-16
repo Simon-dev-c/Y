@@ -2,13 +2,15 @@
 session_start();
 $id = $_SESSION['id'] ?? null;
 
+// Utilisé dans partage
+
 if (!$id) {
-    header('Location: login.php');
+    header('Location: ../login.php');
     exit();
 }
 
-include('includes/connexion_inc.php');
-$pdo = connexion('Y_database.db');
+include('../includes/connexion_inc.php');
+$pdo = connexion('../Y_database.db');
 
 if (isset($_FILES['photo']) && $_FILES['photo']['error'] === 0) {
     $caption = $_POST['caption'] ?? '';
