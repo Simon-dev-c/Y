@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+// Utilisé dans register.php
+
 if (isset($_POST['nom']) && isset($_POST['mdp']) && isset($_POST['email'])) {
     $nom = $_POST['nom'];
     $mdp = $_POST['mdp'];
