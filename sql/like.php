@@ -2,6 +2,8 @@
 session_start();
 $id = $_SESSION['id'] ?? null;
 
+// Utilisé dans recup_post -> utilisé dans accueil
+
 if ($id && isset($_POST['post_id'])) {
     $post_id = $_POST['post_id'];
 
