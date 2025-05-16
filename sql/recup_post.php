@@ -2,6 +2,8 @@
 include("includes/connexion_inc.php");
 $pdo = connexion('Y_database.db');
 
+// Utilisé dans accueil
+
 try {
     $stmt = $pdo->query('SELECT posts.id, posts.contenu, posts.date, users.nom FROM posts INNER JOIN users ON posts.user_id = users.id ORDER BY posts.date DESC');
     while ($post = $stmt->fetch(PDO::FETCH_ASSOC)) {
