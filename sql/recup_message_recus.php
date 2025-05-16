@@ -2,6 +2,8 @@
 include("includes/connexion_inc.php");
 $pdo = connexion('Y_database.db');
 
+// Utilisé dans message
+
 try {
 $stmt = $pdo->prepare('SELECT messages.id, messages.contenu, messages.date, users.nom AS sender_name FROM messages INNER JOIN users ON messages.sender_id = users.id WHERE messages.receiver_id = :id ORDER BY messages.date DESC');
 $stmt->bindParam(':id', $id);
