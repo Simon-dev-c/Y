@@ -2,6 +2,8 @@
 session_start();
 $id = $_SESSION['id'] ?? null;
 
+// Utilisé dans accueil.php
+
 if ($id && isset($_POST['post']) && !empty(trim($_POST['post']))) {
     $contenu = trim($_POST['post']);
     $date = date('Y-m-d H:i:s');
