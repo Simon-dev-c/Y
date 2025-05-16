@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+// Utilisé dans login
+
 if (isset($_POST['nom']) && isset($_POST['mdp']) ) {
     $nom = $_POST['nom'];
     $mdp = $_POST['mdp'];
