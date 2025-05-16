@@ -5,8 +5,8 @@ $id = $_SESSION['id'] ?? null;
 if ($id && isset($_POST['post_id'])) {
     $post_id = $_POST['post_id'];
 
-    include('includes/connexion_inc.php');
-    $pdo = connexion('Y_database.db');
+    include('../includes/connexion_inc.php');
+    $pdo = connexion('../Y_database.db');
 
     try {
         // Vérifier si l'utilisateur a déjà liké ce post
