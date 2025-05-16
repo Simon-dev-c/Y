@@ -3,7 +3,7 @@ session_start();
 $id = $_SESSION['id'] ?? null;
 
 if (!$id) {
-    header('Location: login.php');
+    header('Location: ../login.php');
     exit();
 }
 
