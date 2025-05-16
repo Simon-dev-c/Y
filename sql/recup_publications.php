@@ -1,4 +1,7 @@
 <?php
+
+// Utilisé dans profile
+
 try {
     $stmt = $pdo->prepare('SELECT id, contenu, date FROM posts WHERE user_id = :user_id ORDER BY date DESC');
     $stmt->bindParam(':user_id', $user_id);
