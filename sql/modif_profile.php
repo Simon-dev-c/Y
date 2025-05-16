@@ -7,8 +7,8 @@ if (!$id) {
     exit();
 }
 
-include('includes/connexion_inc.php');
-$pdo = connexion('Y_database.db');
+include('../includes/connexion_inc.php');
+$pdo = connexion('../Y_database.db');
 
 // Récupération des données
 $email = $_POST['email'] ?? '';
