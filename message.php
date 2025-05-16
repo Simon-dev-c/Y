@@ -30,7 +30,7 @@ if (!isset($nom)) {
         <h2>Messagerie</h2>
 
         <h3>Envoyer un message :</h3>
-        <form action="envoyer_message.php" method="POST" class="message-form">
+        <form action="sql/envoyer_message.php" method="POST" class="message-form">
             <label>Destinataire (ID) :</label>
             <input type="number" name="receiver_id" required><br>
             <label>Message :</label>
