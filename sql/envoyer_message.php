@@ -7,8 +7,8 @@ if (!$id) {
     exit();
 }
 
-include('includes/connexion_inc.php');
-$pdo = connexion('Y_database.db');
+include('../includes/connexion_inc.php');
+$pdo = connexion('../Y_database.db');
 
 $receiver_id = $_POST['receiver_id'] ?? null;
 $contenu = trim($_POST['contenu']) ?? '';
