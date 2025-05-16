@@ -5,8 +5,14 @@ try {
     $stmt->execute();
 
     while ($post = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        echo "<div class='post_item'>";
-        echo "<p>" . htmlspecialchars($post['contenu']) . "</p>";
+        echo "<div class='post_item'>";                
+        // Vérifie si le contenu est une image
+        if (strpos($post['contenu'], 'uploads/') !== false) {
+            echo "<img src='" . htmlspecialchars($post['contenu']) . "' alt='Image partagée' style='width:100%; max-width:300px; border-radius: 10px; margin-bottom: 10px;'>";
+        } else {
+            echo "<p>" . htmlspecialchars($post['contenu']) . "</p>";
+        }
+
         echo "<small>Publié le : " . htmlspecialchars($post['date']) . "</small>";
         echo "</div>";
     }
