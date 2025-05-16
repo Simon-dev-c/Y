@@ -2,6 +2,8 @@
 session_start();
 $id = $_SESSION['id'] ?? null;
 
+// Utilisé dans setting
+
 if (!$id) {
     header('Location: ../login.php');
     exit();
