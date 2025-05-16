@@ -31,7 +31,7 @@ if (!isset($id)) {
         <p>Biographie : <?php echo htmlspecialchars($bio); ?></p>
 
         <?php if ($user_id != $id) { ?>
-            <form action="follow.php" method="POST">
+            <form action="sql/follow.php" method="POST">
                 <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
                 <?php if ($is_following) { ?>
                     <button type="submit" name="action" value="unfollow">Se désabonner</button>
