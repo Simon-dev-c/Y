@@ -30,7 +30,7 @@ if (!isset($nom)) {
     </div>
     <div class="settings">
         <h2>Modifier votre profil</h2>
-        <form action="modif_profile.php" method="POST" class="settings-form" enctype="multipart/form-data">
+        <form action="sql/modif_profile.php" method="POST" class="settings-form" enctype="multipart/form-data">
             <label>Email :</label>
             <input type="email" name="email" placeholder="Entrez votre email" value="<?php echo htmlspecialchars($email); ?>" required><br>
 
