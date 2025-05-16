@@ -7,8 +7,8 @@ if (!$id) {
     exit();
 }
 
-include('includes/connexion_inc.php');
-$pdo = connexion('Y_database.db');
+include('../includes/connexion_inc.php');
+$pdo = connexion('../Y_database.db');
 
 $user_id = $_POST['user_id'] ?? null;
 $action = $_POST['action'] ?? '';
