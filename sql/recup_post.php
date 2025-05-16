@@ -17,10 +17,18 @@ try {
 
         echo "<small>Publié le : " . htmlspecialchars($post['date']) . "</small>";
 
+        // Affichage Les Likes 
+        $stmt_likes = $pdo->prepare('SELECT COUNT(*) AS nbr FROM likes WHERE likes.post_id = :post_id ');
+        $stmt_likes->bindParam(':post_id', $post['id']);
+        $stmt_likes->execute();
+        $likes = $stmt_likes->fetch(PDO::FETCH_ASSOC);
+
+        
         // Formulaire pour le like
         echo "<form action='like.php' method='POST' class='like-form'>";
         echo "<input type='hidden' name='post_id' value='" . $post['id'] . "'>";
         echo "<button type='submit'>Like</button>";
+        echo "<p>like : ".$likes['nbr']."</p>";
         echo "</form>";
 
         // Formulaire pour ajouter un commentaire
