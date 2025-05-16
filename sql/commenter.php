@@ -7,8 +7,8 @@ if ($id && isset($_POST['post_id']) && isset($_POST['comment']) && !empty(trim($
     $comment = trim($_POST['comment']);
     $date = date('Y-m-d H:i:s');
 
-    include('includes/connexion_inc.php');
-    $pdo = connexion('Y_database.db');
+    include('../includes/connexion_inc.php');
+    $pdo = connexion('../Y_database.db');
 
     try {
         $stmt = $pdo->prepare('INSERT INTO comments (post_id, user_id, contenu, date) VALUES (:post_id, :user_id, :contenu, :date)');
