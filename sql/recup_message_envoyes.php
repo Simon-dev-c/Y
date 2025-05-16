@@ -1,4 +1,7 @@
 <?php
+
+// Utilisé dans message
+
 /*
 On devrait le mettre mais on l'a déjà dans message.php car on inclu recup_message_recus.php
 include("includes/connexion_inc.php");
