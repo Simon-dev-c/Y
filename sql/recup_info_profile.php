@@ -17,7 +17,7 @@ try {
     if ($user) {
         $nom = $user['nom'];
         $email = $user['email'];
-        $bio = $user['bio'];
+        $bio = $user['bio'] ?? ' ';
     }
 } catch (PDOException $e) {
     echo "<p>Erreur lors de la récupération des informations utilisateur.</p>";
