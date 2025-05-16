@@ -1,3 +1,8 @@
+- Finir de mettre au point le rapport
+
+A voir Javascript :
+
+
 Affichage dynamique de notifications/messages
 ➡ Exemple : afficher un message de succès ou d’erreur sans recharger la page.
 function showMessage(text, type = "success") {
