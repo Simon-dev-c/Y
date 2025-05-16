@@ -2,6 +2,8 @@
 include('includes/connexion_inc.php');
 $pdo = connexion('Y_database.db');
 
+// Utilisé dans followers
+
 try {
     $stmt = $pdo->prepare('SELECT follows.follower_id, users.nom FROM follows INNER JOIN users ON follows.follower_id = users.id WHERE follows.following_id = :user_id');
     $stmt->bindParam(':user_id', $user_id);
