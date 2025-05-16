@@ -23,7 +23,7 @@ include("includes/head2.php");
             <label><input type="password" name="mdp" placeholder="Mot de passe" required="required" maxlength="25"></label>
             <br><br>
             <label><input name="button" type="submit" value="Se connecter"></label><br>
-            <label><a href="register.php">Pas de compte ?</a></label><br>
+            <label><a href="login.php">Pas de compte ?</a></label><br>
 
         <?php
         } else {
