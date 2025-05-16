@@ -2,6 +2,8 @@
 session_start();
 $id = $_SESSION['id'] ?? null;
 
+// Utilisé dans recup_post -> utilisé dans accueil
+
 if ($id && isset($_POST['post_id']) && isset($_POST['comment']) && !empty(trim($_POST['comment']))) {
     $post_id = $_POST['post_id'];
     $comment = trim($_POST['comment']);
