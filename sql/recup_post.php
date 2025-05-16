@@ -25,14 +25,14 @@ try {
 
         
         // Formulaire pour le like
-        echo "<form action='like.php' method='POST' class='like-form'>";
+        echo "<form action='./sql/like.php' method='POST' class='like-form'>";
         echo "<input type='hidden' name='post_id' value='" . $post['id'] . "'>";
         echo "<button type='submit'>Like</button>";
         echo "<p>like : ".$likes['nbr']."</p>";
         echo "</form>";
 
         // Formulaire pour ajouter un commentaire
-        echo "<form action='commenter.php' method='POST' class='comment-form'>";
+        echo "<form action='./sql/commenter.php' method='POST' class='comment-form'>";
         echo "<input type='hidden' name='post_id' value='" . $post['id'] . "'>";
         echo "<textarea name='comment' rows='2' placeholder='Ajouter un commentaire'></textarea>";
         echo "<button type='submit'>Commenter</button>";
