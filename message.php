@@ -7,8 +7,8 @@ $statut = $_SESSION['statut'] ?? null;
 function NoConnect()
 {
     echo "Tu n'es pas connecté<br>";
-    echo "<a href='register.php'>Connexion</a><br>";
-    echo "<a href='login.php'>Inscription</a><br>";
+    echo "<a href='login.php'>Connexion</a><br>";
+    echo "<a href='register.php'>Inscription</a><br>";
 }
 
 ?>
