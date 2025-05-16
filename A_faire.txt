@@ -1,3 +1,32 @@
--Inscription/Connexion -> Fichier avant bdd ou en attente
--HTML/CSS pour message/setting/partage
--Compléter le profile (rajouter fonctionnalités)
+Affichage dynamique de notifications/messages
+➡ Exemple : afficher un message de succès ou d’erreur sans recharger la page.
+function showMessage(text, type = "success") {
+  const msg = document.createElement("div");
+  msg.className = `alert alert-${type}`;
+  msg.textContent = text;
+  document.body.appendChild(msg);
+  setTimeout(() => msg.remove(), 3000);
+}
+
+Validation de formulaire côté client
+➡ Empêche l’envoi de formulaires incomplets (ex. : inscription, publication, message).
+function validateForm() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  if (!username || !password) {
+    alert("Tous les champs doivent être remplis !");
+    return false;
+  }
+  return true;
+}
+
+Like ou interaction sans rechargement (AJAX)
+➡ Ajouter un "like" à une publication sans recharger la page.
+function likePost(postId) {
+  fetch(`like.php?id=${postId}`)
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById(`like-count-${postId}`).textContent = data.likes;
+    });
+}
+
