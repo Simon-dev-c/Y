@@ -1,6 +1,9 @@
 <?php
+/*
+déjà mis dans recup users
 include("includes/connexion_inc.php");
 $pdo = connexion('Y_database.db');
+*/
 
 // Utilisé dans accueil
 
