@@ -5,11 +5,18 @@ $pdo = connexion('Y_database.db');
 // Utilisé dans accueil
 
 try {
-    $stmt = $pdo->query('SELECT users.nom FROM users');
-    $users = $stmt->fetchAll(PDO::FETCH_COLUMN);
+    $stmt = $pdo->query('SELECT users.id, users.nom FROM users');
+    $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $i = 0;
+    /*
+    echo "<pre>";
+    var_dump($users);
+    echo "</pre>";
+    */
+
     while (isset($users[$i])) {
-        echo "<li>" . htmlspecialchars($users[$i]) . "</li>";
+
+        echo "<li><a href='view_profile.php?user_id=" . $users[$i]['id'] . "' class='user-link'>" . htmlspecialchars($users[$i]['nom']) . "</a></li>";
         $i++;
     }
 } catch (PDOException $e) {
