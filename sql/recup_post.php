@@ -8,13 +8,15 @@ $pdo = connexion('Y_database.db');
 // Utilisé dans accueil
 
 try {
-    $stmt = $pdo->query('SELECT posts.id, posts.contenu, posts.date, users.nom FROM posts INNER JOIN users ON posts.user_id = users.id ORDER BY posts.date DESC');
+    $stmt = $pdo->query('SELECT posts.id, posts.user_id, posts.contenu, posts.date, posts.caption, users.nom FROM posts INNER JOIN users ON posts.user_id = users.id ORDER BY posts.date DESC');
     while ($post = $stmt->fetch(PDO::FETCH_ASSOC)) {
         echo "<div class='post-item'>";
-        echo "<h4>" . htmlspecialchars($post['nom']) . "</h4>";
+        echo "<h4><a href='view_profile.php?user_id=" . $post['user_id'] . "' class='user-link'>" . htmlspecialchars($post['nom']) . "</a></h4>";
+        //echo "<h4>" . htmlspecialchars($post['nom']) . "</h4>";
 
         // Vérifie si le contenu est une image
         if (strpos($post['contenu'], 'uploads/') !== false) {
+            echo "<p>".htmlspecialchars($post['caption'])."</p>";
             echo "<img src='" . htmlspecialchars($post['contenu']) . "' alt='Image partagée' style='width:100%; max-width:300px; border-radius: 10px; margin-bottom: 10px;'>";
         } else {
             echo "<p>" . htmlspecialchars($post['contenu']) . "</p>";
