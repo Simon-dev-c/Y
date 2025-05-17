@@ -18,12 +18,18 @@ include("includes/head.php");
 
 <div class="contenu">
     <div class="gauche">
-        <input type="text" id="search" placeholder="Rechercher...">
-        <ul id="menu">
-            <?php
-            include("sql/recup_users.php");
-            ?>
-        </ul>
+        <?php
+        if (isset($nom)) {
+        ?>
+            <input type="text" id="search" placeholder="Rechercher...">
+            <ul id="menu">
+                <?php
+                include("sql/recup_users.php");
+                ?>
+            </ul>
+        <?php
+        }
+        ?>
     </div>
     <div class="post">
         <?php
