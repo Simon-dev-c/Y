@@ -74,6 +74,8 @@ Nous nous sommes inspirés, mais nous avons également apporté notre propre vis
    \hline
    profile & page du profil contenant les informations de l'utilisateur \\ & ainsi que ses publications \\
    \hline
+   view\_profile & page du profil d'un autre utilisateur contenant ses informations \\ & ainsi que ses publications \\
+   \hline
    setting & page permettant de gérer son compte \\
    \hline
    message & page pour envoyer un message et afficher les messages reçus et envoyés \\
@@ -93,10 +95,11 @@ Nous nous sommes inspirés, mais nous avons également apporté notre propre vis
   
  \begin{itemize}
  \item users : id, nom, email, mot\_de\_passe, photo, bio, statut;
- \item posts : id, users\_id, contenu, date;
+ \item posts : id, users\_id, contenu, date, caption;
  \item likes : id, post\_id, user\_id;
  \item follows : id, follower\_id, following\_id;
  \item comments : id, post\_id, user\_id, contenu, date;
+ \item messages : id, sender\_id, receiver\_id, contenu, date;
  \end{itemize}
 
 \newpage
@@ -152,6 +155,15 @@ Tables :
     
   \item clé étrangère : post\_id -> posts.id
   \item clé étrangère : user\_id -> users.id
+  
+  \end{itemize}
+
+\item \textbf{messages :}
+  
+  \begin{itemize}
+    
+  \item clé étrangère : receiver\_id -> users.id
+  \item clé étrangère : sender\_id -> users.id
   
   \end{itemize}
     
