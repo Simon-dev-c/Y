@@ -53,9 +53,10 @@ include("includes/head.php");
         ?>
     </div>
     <div class="droite">
-        
+
     </div>
 </div>
+
 <?php
 include("includes/footer.php");
 ?>
