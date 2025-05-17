@@ -42,6 +42,6 @@ if ($user_id && $user_id != $id) {
     }
 }
 
-header('Location: ../profile.php?user_id=' . $user_id);
+header('Location: ../view_profile.php?user_id=' . $user_id);
 exit();
 ?>
