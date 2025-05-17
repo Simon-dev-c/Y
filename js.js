@@ -35,3 +35,13 @@ document.getElementById('search').addEventListener('input', function () {
         item.style.display = text.includes(filter) ? 'list-item' : 'none';
     });
 });
+
+
+document.getElementById('photoInput').addEventListener('change', function() {
+    const file = this.files[0];
+    
+    if (file && file.type !== 'image/jpeg') {
+        alert('Le fichier doit être une image JPEG.');
+        this.value = ''; // Réinitialise le champ
+    }
+});
