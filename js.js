@@ -25,3 +25,13 @@ function verifierDateNaissance(jour, mois, annee) {
     }
     return true;
 }
+
+document.getElementById('search').addEventListener('input', function () {
+    const filter = this.value.toLowerCase();
+    const items = document.querySelectorAll('#menu li');
+
+    items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(filter) ? 'list-item' : 'none';
+    });
+});
