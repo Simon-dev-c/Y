@@ -8,12 +8,8 @@ try {
     $stmt = $pdo->query('SELECT users.nom FROM users');
     $users = $stmt->fetchAll(PDO::FETCH_COLUMN);
     $i = 0;
-/*    echo "<pre>";
-    var_dump($users);
-    echo "</pre>";
-*/
     while (isset($users[$i])) {
-        echo "<li>" . $users[$i] . "</li>";
+        echo "<li>" . htmlspecialchars($users[$i]) . "</li>";
         $i++;
     }
 } catch (PDOException $e) {
