@@ -94,3 +94,32 @@ body {
     margin-bottom: 5px;
   }
     
+textarea {
+  resize: none;
+}
+
+#menu {
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100px;
+  height: 70px;
+  overflow: hidden;
+}
+
+#menu li {
+  display: list-item;
+}
+
+.post{
+  flex: 1;
+}
+
+.research {
+  flex: 1;
+}
+
+.droite {
+  flex: 1;
+}
