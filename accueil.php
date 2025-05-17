@@ -17,6 +17,14 @@ include("includes/head.php");
 ?>
 
 <div class="contenu">
+    <div class="research">
+        <input type="text" id="search" placeholder="Rechercher...">
+        <ul id="menu">
+            <?php
+            include("sql/recup_users.php");
+            ?>
+        </ul>
+    </div>
     <div class="post">
         <?php
         if (!isset($nom)) {
@@ -38,8 +46,10 @@ include("includes/head.php");
         }
         ?>
     </div>
+    <div class="droite">
+        
+    </div>
 </div>
-
 <?php
 include("includes/footer.php");
 ?>
