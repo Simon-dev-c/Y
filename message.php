@@ -10,6 +10,8 @@ function NoConnect()
     echo "<a href='login.php'>Connexion</a><br>";
     echo "<a href='register.php'>Inscription</a><br>";
 }
+include("includes/connexion_inc.php");
+$pdo = connexion('Y_database.db');
 
 ?>
 <?php
