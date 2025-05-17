@@ -9,12 +9,12 @@ if (!isset($_SESSION['id'])) {
 include('includes/connexion_inc.php');
 $pdo = connexion('Y_database.db');
 
-if (!isset($_GET['id'])) {
+if (!isset($_GET['user_id'])) {
     echo "Utilisateur inconnu.";
     exit();
 }
 
-$user_id = (int) $_GET['id'];
+$user_id = (int) $_GET['user_id'];
 $current_user_id = $_SESSION['id'];
 
 if ($user_id === $current_user_id) {
