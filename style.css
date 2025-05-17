@@ -21,6 +21,10 @@ body {
   .header {
     top: 0;
   }
+
+  textarea{
+    resize: none;
+  }
   
   .footer {
     bottom: 0;
@@ -94,6 +98,17 @@ body {
     margin-bottom: 5px;
   }
     
+  .user-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.user-link:hover {
+    color: #f1c40f; /* jaune doré au survol par exemple */
+}
+
 textarea {
   resize: none;
 }
