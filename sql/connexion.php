@@ -27,6 +27,7 @@ if (isset($_POST['nom']) && isset($_POST['mdp']) ) {
             echo '<p>Connexion effectué</p>';
             
             $_SESSION['id'] = $requete['id'];
+            $_SESSION['user_id'] = $requete['id'];
             $_SESSION['nom'] = $nom;
             $_SESSION['statut'] = $requete["statut"];
         } else {
