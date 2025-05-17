@@ -17,7 +17,7 @@ include("includes/head.php");
 ?>
 
 <div class="contenu">
-    <div class="research">
+    <div class="gauche">
         <input type="text" id="search" placeholder="Rechercher...">
         <ul id="menu">
             <?php
