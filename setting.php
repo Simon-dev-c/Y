@@ -35,7 +35,7 @@ if (!isset($nom)) {
             <input type="email" name="email" placeholder="Entrez votre email" value="<?php echo htmlspecialchars($email); ?>" required><br>
 
             <label>Mot de passe :</label>
-            <input type="password" name="password" placeholder="Laissez vide pour ne pas changer"><br>
+            <input type="password" name="password" placeholder="Laissez vide pour ne pas changer" ><br>
 
             <label>Photo de profil :</label>
             <input type="file" name="photo"><br>
