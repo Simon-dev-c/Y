@@ -25,7 +25,7 @@ if (!isset($id)) {
         <h2>Partager une photo</h2>
         <form action="sql/upload_photo.php" method="POST" enctype="multipart/form-data" class="partage-form">
             <label>Choisissez une photo :</label>
-            <input type="file" name="photo" accept="image/*" required>
+            <input type="file" id="photoInput" name="photo" accept="image/*" required>
 
             <label>Légende :</label>
             <textarea name="caption" rows="3" placeholder="Ajouter une légende..."></textarea>
