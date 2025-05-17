@@ -4,6 +4,6 @@
     <img src="images/paper-plane.svg" alt="Messages" onclick="location.href='message.php'">
     <img src="images/share.svg" alt="Share" onclick="location.href='partage.php'">
 </div>
-
+<script src="js.js"></script>
 </body>
 </html>
