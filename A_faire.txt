@@ -1,4 +1,4 @@
-- Finir de mettre au point le rapport
+- Finir de mettre au point le rapport : fait
 
 A voir Javascript :
 
