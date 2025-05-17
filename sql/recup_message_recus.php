@@ -1,6 +1,4 @@
 <?php
-include("includes/connexion_inc.php");
-$pdo = connexion('Y_database.db');
 
 // Utilisé dans message
 
