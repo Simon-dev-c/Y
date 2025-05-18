@@ -138,3 +138,10 @@ textarea {
 .droite {
   flex: 1;
 }
+
+.post-image{
+  width:100%; 
+  max-width:300px; 
+  border-radius: 10px; 
+  margin-bottom: 10px;
+}
