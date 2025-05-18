@@ -11,7 +11,7 @@ try {
         echo "<div class='post_item'>";                
         // Vérifie si le contenu est une image
         if (strpos($post['contenu'], 'uploads/') !== false) {
-            echo "<img src='" . htmlspecialchars($post['contenu']) . "' alt='Image partagée' style='width:100%; max-width:300px; border-radius: 10px; margin-bottom: 10px;'>";
+            echo "<img src='" . htmlspecialchars($post['contenu']) . "' alt='Image partagée' class='post-image'>";
         } else {
             echo "<p>" . htmlspecialchars($post['contenu']) . "</p>";
         }
